@@ -1,0 +1,2 @@
+Dépose ici les PDF de tes certificats (ex : ccna.pdf),
+puis écris le nom du fichier dans le champ fichier du certificat (js/donnees.js).

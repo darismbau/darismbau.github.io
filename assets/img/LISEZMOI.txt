@@ -1,0 +1,16 @@
+Images du site
+
+photo.jpg
+  Ta photo de profil. Format carré conseillé (ex : 600 x 600), visage centré.
+  Tant qu'elle n'est pas là, le site affiche tes initiales "DM".
+
+apercu.png
+  Image affichée quand quelqu'un partage le lien du site (LinkedIn, WhatsApp...).
+  Taille conseillée : 1200 x 630.
+
+projets/
+  Une image par projet, nommée comme l'id du projet dans js/donnees.js, en .jpg :
+  puissance4.jpg, frigate.jpg, lorawan.jpg, krojanty.jpg, cluster.jpg, mpls.jpg,
+  operateur.jpg, asterisk.jpg, prise.jpg, integratif.jpg, absences.jpg, fft.jpg,
+  petite-structure.jpg, mitm.jpg, succursale.jpg, wifi.jpg, site-perso.jpg, cyber-iot.jpg
+  Format conseillé : 16/9 (ex : 1280 x 720). Sans image, une illustration est dessinée automatiquement.
