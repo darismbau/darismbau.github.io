@@ -4,7 +4,7 @@
    (contexte, fiche technique, rôle, réalisations, compétences,
    apports, ce que je ferais autrement, bilan).
    Pour ajouter un projet : copie un bloc, change l'id et les textes
-   (un modèle vide à copier est dans le README, section "Modèles").
+   (un modèle vide à copier est dans le guide Notion du site).
    Seuls id, annee, date, code, titre, resume et domaines sont
    obligatoires : un champ absent n'est simplement pas affiché.
 

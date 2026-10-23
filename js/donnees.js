@@ -19,7 +19,7 @@ const profil = {
 // Mes comptes en ligne (laisse url vide pour cacher un lien)
 const liens = [
   { nom: "GitHub", url: "https://github.com/darismbau", icone: "github" },
-  { nom: "LinkedIn", url: "", icone: "linkedin" },
+  { nom: "LinkedIn", url: "https://www.linkedin.com/in/daris-mbau-ir-179690295", icone: "linkedin" },
   { nom: "Notion", url: "", icone: "notion" }
 ];
 
