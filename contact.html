@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titre et description pour Google et les partages -->
+  <title>Contact · Daris Mbau</title>
+  <meta name="description" content="Contacter Daris Mbau : formulaire, email, téléphone et WhatsApp.">
+  <meta name="author" content="Daris Mbau">
+  <meta name="theme-color" content="#121110">
+
+  <!-- Aperçu quand on partage le lien (LinkedIn, WhatsApp...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact · Daris Mbau">
+  <meta property="og:description" content="Contacter Daris Mbau : formulaire, email, téléphone et WhatsApp.">
+  <meta property="og:image" content="https://darismbau.github.io/assets/img/apercu.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Police Geist hébergée sur le site (rapide, pas de service externe) -->
+  <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applique le thème enregistré avant l'affichage pour éviter un flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+
+<body data-page="contact" class="page-contact">
+  <a class="lien-evitement" href="#contenu" data-i18n="lien.evitement">Aller au contenu</a>
+
+  <!-- En-tête : rempli par js/main.js -->
+  <header class="entete" id="entete"></header>
+
+  <main id="contenu">
+    <section class="entete-page">
+      <div class="grille-12">
+        <span class="etiquette" data-i18n="contact.etiquette"></span>
+        <h1 class="titre-page"><span data-lettres-cle="contact.titre"></span></h1>
+      </div>
+      <div class="trait-page"></div>
+    </section>
+    <section class="section grille-12 contact-grille" style="padding-top: clamp(40px, 5vw, 70px)">
+      <div class="contact-gauche apparition">
+        <p data-i18n="contact.intro"></p>
+        <div class="contact-direct">
+          <span class="mono" data-i18n="contact.direct"></span>
+          <div class="ligne-contact"><a id="lien-email" class="souligne" href="#"></a><button class="bouton-copier" type="button" data-copier="email" data-i18n-aria="contact.copier"><svg class="icone icone-copier"><use href="#i-copier"/></svg><svg class="icone icone-ok"><use href="#i-ok"/></svg></button></div>
+          <div class="ligne-contact"><a id="lien-tel" class="souligne" href="#"></a><button class="bouton-copier" type="button" data-copier="tel" data-i18n-aria="contact.copier"><svg class="icone icone-copier"><use href="#i-copier"/></svg><svg class="icone icone-ok"><use href="#i-ok"/></svg></button></div>
+        </div>
+        <div><a class="bouton bouton-contour" id="lien-whatsapp" href="#" target="_blank" rel="noopener"><span class="glisse"><span data-i18n="contact.whatsapp"></span><span data-i18n="contact.whatsapp"></span></span><svg class="icone"><use href="#i-fleche"/></svg></a></div>
+        <div class="liens-sociaux" id="liens-sociaux"></div>
+      </div>
+
+      <form class="formulaire apparition" id="formulaire-contact" novalidate>
+        <div class="champ"><input type="text" id="champ-nom" name="nom" placeholder=" " required autocomplete="name"><label for="champ-nom" data-i18n="contact.nom"></label><span class="soulignement"></span></div>
+        <div class="champ"><input type="email" id="champ-email" name="email" placeholder=" " required autocomplete="email"><label for="champ-email" data-i18n="contact.email"></label><span class="soulignement"></span></div>
+        <div class="champ"><input type="text" id="champ-sujet" name="sujet" placeholder=" " required><label for="champ-sujet" data-i18n="contact.sujet"></label><span class="soulignement"></span></div>
+        <div class="champ"><textarea id="champ-message" name="message" rows="5" placeholder=" " required></textarea><label for="champ-message" data-i18n="contact.message"></label><span class="soulignement"></span></div>
+        <!-- Piège à robots : invisible pour les humains -->
+        <input type="text" name="site" class="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="bouton bouton-grand" id="bouton-envoyer"><span id="texte-envoyer" data-i18n="contact.envoyer"></span><svg class="icone"><use href="#i-fleche"/></svg></button>
+        <p class="message-formulaire" id="message-formulaire" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pied de page : rempli par js/main.js -->
+  <footer class="pied" id="pied"></footer>
+
+  <script src="js/donnees.js"></script>
+  <script src="js/projets.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

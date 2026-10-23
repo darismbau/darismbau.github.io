@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titre et description pour Google et les partages -->
+  <title>Parcours · Daris Mbau</title>
+  <meta name="description" content="Le parcours de Daris Mbau : ENSISA, BUT Réseaux & Télécommunications et alternance en réseau d'opérateur.">
+  <meta name="author" content="Daris Mbau">
+  <meta name="theme-color" content="#121110">
+
+  <!-- Aperçu quand on partage le lien (LinkedIn, WhatsApp...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Parcours · Daris Mbau">
+  <meta property="og:description" content="Le parcours de Daris Mbau : ENSISA, BUT Réseaux & Télécommunications et alternance en réseau d'opérateur.">
+  <meta property="og:image" content="https://darismbau.github.io/assets/img/apercu.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Police Geist hébergée sur le site (rapide, pas de service externe) -->
+  <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applique le thème enregistré avant l'affichage pour éviter un flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+
+<body data-page="parcours">
+  <a class="lien-evitement" href="#contenu" data-i18n="lien.evitement">Aller au contenu</a>
+
+  <!-- En-tête : rempli par js/main.js -->
+  <header class="entete" id="entete"></header>
+
+  <main id="contenu">
+    <section class="entete-page">
+      <div class="grille-12">
+        <span class="etiquette" data-i18n="parcours.etiquette"></span>
+        <h1 class="titre-page"><span data-lettres-cle="parcours.titre"></span></h1>
+        <p class="intro-page apparition" data-i18n="parcours.intro"></p>
+      </div>
+      <div class="trait-page"></div>
+    </section>
+    <section class="section" style="padding-top: clamp(40px, 5vw, 70px)">
+      <div class="frise" id="frise"></div>
+    </section>
+  </main>
+
+  <!-- Pied de page : rempli par js/main.js -->
+  <footer class="pied" id="pied"></footer>
+
+  <script src="js/donnees.js"></script>
+  <script src="js/projets.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

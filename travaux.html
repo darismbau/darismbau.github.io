@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titre et description pour Google et les partages -->
+  <title>Travaux · Daris Mbau</title>
+  <meta name="description" content="Les projets de Daris Mbau : intelligence artificielle, réseaux informatiques, télécoms, développement et objets connectés.">
+  <meta name="author" content="Daris Mbau">
+  <meta name="theme-color" content="#121110">
+
+  <!-- Aperçu quand on partage le lien (LinkedIn, WhatsApp...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Travaux · Daris Mbau">
+  <meta property="og:description" content="Les projets de Daris Mbau : intelligence artificielle, réseaux informatiques, télécoms, développement et objets connectés.">
+  <meta property="og:image" content="https://darismbau.github.io/assets/img/apercu.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Police Geist hébergée sur le site (rapide, pas de service externe) -->
+  <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applique le thème enregistré avant l'affichage pour éviter un flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+
+<body data-page="travaux">
+  <a class="lien-evitement" href="#contenu" data-i18n="lien.evitement">Aller au contenu</a>
+
+  <!-- En-tête : rempli par js/main.js -->
+  <header class="entete" id="entete"></header>
+
+  <main id="contenu">
+    <section class="entete-page">
+      <div class="grille-12">
+        <span class="etiquette" data-i18n="travaux.etiquette"></span>
+        <h1 class="titre-page"><span data-lettres-cle="travaux.titre"></span><sup id="nombre-total"></sup></h1>
+        <p class="intro-page apparition" data-i18n="travaux.intro"></p>
+      </div>
+      <div class="trait-page"></div>
+    </section>
+    <div class="barre-outils">
+      <div class="filtres" id="filtres" role="toolbar" aria-label="Filtres"></div>
+      <div class="vues" id="vues" role="group" aria-label="Vue">
+        <button type="button" data-vue="liste" data-i18n="vue.liste"></button>
+        <button type="button" data-vue="grille" data-i18n="vue.grille"></button>
+      </div>
+    </div>
+    <section class="zone-travaux" id="zone-travaux"></section>
+  </main>
+
+  <!-- Pied de page : rempli par js/main.js -->
+  <footer class="pied" id="pied"></footer>
+
+  <script src="js/donnees.js"></script>
+  <script src="js/projets.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

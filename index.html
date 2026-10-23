@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titre et description pour Google et les partages -->
+  <title>Daris Mbau · IA et réseaux informatiques</title>
+  <meta name="description" content="Portfolio de Daris Mbau, élève ingénieur Informatique & Réseaux à l'ENSISA : réseaux, sécurité et infrastructure pour l'IA.">
+  <meta name="author" content="Daris Mbau">
+  <meta name="theme-color" content="#121110">
+
+  <!-- Aperçu quand on partage le lien (LinkedIn, WhatsApp...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daris Mbau · IA et réseaux informatiques">
+  <meta property="og:description" content="Portfolio de Daris Mbau, élève ingénieur Informatique & Réseaux à l'ENSISA : réseaux, sécurité et infrastructure pour l'IA.">
+  <meta property="og:image" content="https://darismbau.github.io/assets/img/apercu.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Police Geist hébergée sur le site (rapide, pas de service externe) -->
+  <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applique le thème enregistré avant l'affichage pour éviter un flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+
+<body data-page="accueil">
+  <a class="lien-evitement" href="#contenu" data-i18n="lien.evitement">Aller au contenu</a>
+
+  <!-- Écran de chargement (une seule fois par visite) -->
+  <div class="chargement" id="chargement" aria-hidden="true">
+    <div class="chargement-haut mono"><span>Daris Mbau</span><span>Portfolio · 2026</span></div>
+    <div>
+      <div class="chargement-compteur" id="chargement-nombre">000</div>
+      <div class="chargement-barre"><span id="chargement-barre"></span></div>
+    </div>
+  </div>
+  <!-- En-tête : rempli par js/main.js -->
+  <header class="entete" id="entete"></header>
+
+  <main id="contenu">
+    <!-- Héros : le grand nom -->
+    <section class="hero">
+      <div class="hero-meta mono">
+        <span data-i18n="hero.meta1"></span>
+        <span data-i18n="hero.meta2"></span>
+        <span><span data-i18n="lieu"></span> · <span data-heure></span></span>
+        <span><span data-i18n="hero.meta4"></span> <span class="chiffre-travaux" id="nombre-travaux"></span></span>
+      </div>
+
+      <div class="hero-centre">
+        <div class="hero-ligne">
+          <p class="hero-role"><strong data-i18n="hero.role1"></strong><br><span data-i18n="hero.role2"></span></p>
+          <h1 class="nom-geant" aria-label="Daris Mbau"><span data-lettres>Daris</span></h1>
+        </div>
+        <div class="hero-ligne">
+          <figure class="hero-photo"><div class="cadre-photo"><img alt="Daris Mbau" width="176" height="176"><span class="initiales">DM</span></div></figure>
+          <span class="nom-geant" aria-hidden="true"><span data-lettres>Mbau</span></span>
+        </div>
+        <nav class="disciplines" id="disciplines" aria-label="Disciplines"></nav>
+      </div>
+
+      <div class="hero-bas">
+        <div class="lieu mono doux"><p data-i18n="hero.pays"></p><p data-i18n="hero.base"></p></div>
+        <p class="phrase" data-i18n="hero.phrase"></p>
+        <a href="#apropos" class="defiler mono"><span data-i18n="hero.defiler"></span><svg class="icone" aria-hidden="true"><use href="#i-bas"/></svg></a>
+      </div>
+    </section>
+
+    <!-- Bandeau géant qui défile -->
+    <div class="bandeau" aria-hidden="true"><div class="bandeau-piste" id="bandeau-piste"></div></div>
+
+    <!-- À propos -->
+    <section class="section grille-12" id="apropos">
+      <div class="apropos-colonne"><span class="etiquette" data-i18n="apropos.etiquette"></span></div>
+      <p class="manifeste" id="manifeste"></p>
+      <div class="apropos-detail">
+        <div class="apparition">
+          <p class="doux" data-i18n="apropos.texte"></p>
+          <a href="parcours.html" class="fleche-lien souligne"><span data-i18n="apropos.lien"></span><svg class="icone"><use href="#i-fleche"/></svg></a>
+        </div>
+        <div class="chiffres apparition">
+          <div class="chiffre"><strong class="compteur" id="compteur-projets" data-cible="18">00</strong><span data-i18n="apropos.chiffre1"></span></div>
+          <div class="chiffre"><strong class="compteur" data-cible="2">00</strong><span data-i18n="apropos.chiffre2"></span></div>
+          <div class="chiffre"><strong class="compteur" data-cible="3">00</strong><span data-i18n="apropos.chiffre3"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travaux choisis -->
+    <section class="section">
+      <div class="tete-section">
+        <div><span class="etiquette" data-i18n="choisis.etiquette"></span><h2 class="titre-section" data-i18n="choisis.titre"></h2></div>
+        <a href="travaux.html" class="fleche-lien souligne" id="lien-tous"><span data-i18n="choisis.tout"></span> <sup class="mono"></sup><svg class="icone"><use href="#i-fleche"/></svg></a>
+      </div>
+      <div class="grille-12 oeuvres" id="oeuvres"></div>
+    </section>
+
+    <!-- Ce qui m'anime -->
+    <section class="section">
+      <div class="tete-section"><span class="etiquette" data-i18n="passions.etiquette"></span></div>
+      <div class="passions" id="passions"></div>
+    </section>
+
+    <!-- Console -->
+    <section class="section grille-12">
+      <div class="console-texte apparition">
+        <span class="etiquette" data-i18n="console.etiquette"></span>
+        <h2 data-i18n="console.titre"></h2>
+        <p data-i18n="console.texte"></p>
+      </div>
+      <div class="terminal apparition" id="terminal">
+        <div class="terminal-barre"><i></i><i></i><i></i><span data-i18n="terminal.titre"></span></div>
+        <div class="terminal-corps" id="terminal-corps" aria-live="polite"></div>
+        <form class="terminal-ligne" id="terminal-form" autocomplete="off">
+          <label for="terminal-saisie">daris@ensisa:~$</label>
+          <input id="terminal-saisie" type="text" spellcheck="false" aria-label="Commande du terminal">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page : rempli par js/main.js -->
+  <footer class="pied" id="pied"></footer>
+
+  <script src="js/donnees.js"></script>
+  <script src="js/projets.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
