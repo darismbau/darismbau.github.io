@@ -1,0 +1,6 @@
+Les preuves de chaque projet se rangent ici, dans un dossier au nom du projet :
+assets/preuves/<id-du-projet>/<nom-du-fichier>
+
+Les noms attendus sont écrits dans js/projets.js (champ "preuves" de chaque projet).
+Exemple : assets/preuves/mpls/rapport.pdf
+Une preuve dont le fichier manque n'apparaît pas sur le site, donc rien ne casse.
